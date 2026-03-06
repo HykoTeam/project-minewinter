@@ -1,0 +1,38 @@
+name: 提交建议 / Give a Suggestion
+description: 对目前Minewinter服务器给一些建议
+title: "[suggestion]: "
+labels: ["建议"]
+
+body:
+- type: checkboxes
+  id: no-duplicate-issue
+  attributes:
+    label: "我确认没有重复的 Issue"
+    options:
+      - label: "我确认没有重复的 Issue."
+        required: true
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: "请详细描述您的建议"
+    description: "请详细描述您的建议，我们会尽量参考。"
+  validations:
+    required: true
+
+  - type: input
+    id: username
+    attributes:
+      label: 你的 Minecraft ID
+      description: 请填写你在Minewinter上所使用的 Minecraft ID，针对一些 Issue，我们可能会发放奖励。
+    validations:
+      required: true
+
+  - type: input
+    id: qq
+    attributes:
+      label: 你的 QQ
+      description: 方便我们在遇到问题时联系您。
+    validations:
+      required: false
