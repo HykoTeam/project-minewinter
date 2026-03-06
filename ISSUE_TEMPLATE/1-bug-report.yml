@@ -1,0 +1,57 @@
+name: 报告服务器漏洞 / Report a Bug
+
+description: "反馈一个问题，若问题有多个请依次开启，重复反馈将关闭。"
+
+labels: ["漏洞", "等待确认"]
+
+title: "[bug]: "
+
+body:
+
+  - type: checkboxes
+    id: no-duplicate-issue
+    attributes:
+      label: "我确认没有重复的 Issue"
+      options:
+      - label: "我确认没有重复的 Issue."
+        required: true
+
+  - type: input
+    id: client
+    attributes:
+      label: 出现问题时所使用的客户端
+      description: 请填写你所使用的客户端的全称，例如: 原版、Lunar、Badlion等。
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 出现了什么问题？
+      description: 请尽可能详细的描述问题内容，并在必要时附上视频。
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 重现步骤
+      description: 详细描述您遇到漏洞前的操作步骤，推荐配上视频效果更好。
+    validations:
+      required: true
+
+  - type: input
+    id: username
+    attributes:
+      label: 你的 Minecraft ID
+      description: 请填写你在Minewinter上所使用的 Minecraft ID，针对一些 Issue，我们可能会发放奖励。
+    validations:
+      required: true
+
+  - type: input
+    id: qq
+    attributes:
+      label: 你的 QQ
+      description: 方便我们在遇到问题时联系您。
+    validations:
+      required: false
