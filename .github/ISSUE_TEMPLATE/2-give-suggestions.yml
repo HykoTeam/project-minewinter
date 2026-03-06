@@ -4,22 +4,22 @@ title: "[suggestion]: "
 labels: ["建议"]
 
 body:
-- type: checkboxes
-  id: no-duplicate-issue
-  attributes:
-    label: "我确认没有重复的 Issue"
-    options:
-      - label: "我确认没有重复的 Issue"
-        required: true
-  validations:
-    required: true
 
-- type: textarea
-  attributes:
-    label: "请详细描述您的建议"
-    description: "请详细描述您的建议，我们会尽量参考"
-  validations:
-    required: true
+  - type: checkboxes
+    id: no-duplicate-issue
+    attributes:
+      label: "我确认没有重复的 Issue"
+      options:
+        - label: "我确认没有重复的 Issue"
+          required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "请详细描述您的建议"
+      description: "请详细描述您的建议，我们会尽量参考"
+    validations:
+      required: true
 
   - type: input
     id: username
